@@ -47,15 +47,8 @@ $(document).ready(function() {
        });
        $(document).on('input', ".phone_inp input" , function() {
         var name = $(this).val();
-        if (val.startWith("+01")) {
-            $("#input-userphone").val(val).removeClass("error"); 
-        } else {
-            $("#input-userphone").val(val);
-        }
-
+        $("#input-userphone").val(name);
        });
- 
-
 
        $(document).on('click', ".btns" , function() {
          $("#btnLogin").trigger("click");
