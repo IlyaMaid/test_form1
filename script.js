@@ -7,7 +7,7 @@ $(document).ready(function() {
         var roomSpeakers = $(".container").find("#roomSpeakers").html();
         var roomDate = $(".container").find(".roomDate").html();
         if (roomDate.length<5) {
-            roomDate = "РќРµ Р·Р°РїР»Р°РЅРёСЂРѕРІР°РЅРѕ";
+            roomDate = "Не запланировано";
         }
         var countdown = $(".container").find(".countdown").html();
         var dateTZ = $(".container").find(".dateTZ").html();
@@ -21,10 +21,10 @@ $(document).ready(function() {
 	if ( $( "#input-useremail" ).length && $( "#input-useremail" ).parents(".input-group").hasClass('hidden') ) {
 		emailHtml = "none";
 	} else emailHtml = "block";
-	if (window.location.href.indexOf("PP_diagnostic_new") > -1) butInner = "Р’РѕР№С‚Рё";
-		else butInner = "Р’РѕР№С‚Рё РЅР° СЃРµРјРёРЅР°СЂ";
+	if (window.location.href.indexOf("PP_diagnostic_new") > -1) butInner = "Войти";
+		else butInner = "Войти на семинар";
  
-        html = '<div class="bizon" style="  background: url(https://uk-tools.ru/bizon/bg.jpg); "> <div class="bizon_main"> <div class="bizon_lf"> <div class="bizon_img"><img src="https://uk-tools.ru/bizon/img.png" alt=""></div> </div> <div class="bizon_rg"> <div class="bizon_form"> <p class="bizon_t1">'+title+'</p> <div class="bizon_it"> <p class="bizon_it_t1">Р’РµРґСѓС‰РёРµ РІРµР±РёРЅР°СЂР°</p> <p class="bizon_it_t2">'+roomSpeakers+'</p> </div> <div class="bizon_it"> <p class="bizon_it_t1">Р”Р°С‚Р° РїСЂРѕРІРµРґРµРЅРёСЏ</p> <div class="bizon_it_line"> <p class="bizon_it_t2">'+roomDate+'</p> <p class="bizon_it_t3">'+dateTZ+'</p> <p class="bizon_it_t3">'+countdown+'</p> </div> </div> <div class="bizon_form_box"> <div class="bizon_form_box_list bizon_form_box_list_col"> <div class="bizon_form_box_item name_inp"> <p class="bizon_form_t1">Р’РІРµРґРёС‚Рµ РІР°С€Рµ РёРјСЏ</p> <div class="bizon_input"><input type="text" name="name" class="name_inp" placeholder="РРјСЏ" required=""></div> </div> <div class="bizon_form_box_item email_inp" style="display: '+emailHtml+';"> <p class="bizon_form_t1">Р’РІРµРґРёС‚Рµ РІР°С€ Email</p> <div class="bizon_input"><input type="text" name="name" class="name_inp" placeholder="E-mail" required=""></div> </div> <div class="bizon_form_box_item phone_inp" style="display: '+phoneHtml+';"> <p class="bizon_form_t1">Р’РІРµРґРёС‚Рµ РІР°С€ РўРµР»РµС„РѕРЅ</p> <div class="bizon_input"><input type="text" name="name" class="name_inp" placeholder="РўРµР»РµС„РѕРЅ" required=""></div> </div> <div class="bizon_form_box_item"> <button class="btns"> '+butInner+' </button> </div> </div> <div class="polits"> <p class="text-grey" > '+polit+' </p> </div> </div> </div> </div> </div> </div>';
+        html = '<div class="bizon" style="  background: url(https://uk-tools.ru/bizon/bg.jpg); "> <div class="bizon_main"> <div class="bizon_lf"> <div class="bizon_img"><img src="https://uk-tools.ru/bizon/img.png" alt=""></div> </div> <div class="bizon_rg"> <div class="bizon_form"> <p class="bizon_t1">'+title+'</p> <div class="bizon_it"> <p class="bizon_it_t1">Ведущие вебинара</p> <p class="bizon_it_t2">'+roomSpeakers+'</p> </div> <div class="bizon_it"> <p class="bizon_it_t1">Дата проведения</p> <div class="bizon_it_line"> <p class="bizon_it_t2">'+roomDate+'</p> <p class="bizon_it_t3">'+dateTZ+'</p> <p class="bizon_it_t3">'+countdown+'</p> </div> </div> <div class="bizon_form_box"> <div class="bizon_form_box_list bizon_form_box_list_col"> <div class="bizon_form_box_item name_inp"> <p class="bizon_form_t1">Введите ваше имя</p> <div class="bizon_input"><input type="text" name="name" class="name_inp" placeholder="Имя" required=""></div> </div> <div class="bizon_form_box_item email_inp" style="display: '+emailHtml+';"> <p class="bizon_form_t1">Введите ваш Email Email</p> <div class="bizon_input"><input type="text" name="name" class="name_inp" placeholder="E-mail" required=""></div> </div> <div class="bizon_form_box_item phone_inp" style="display: '+phoneHtml+';"> <p class="bizon_form_t1">Введите ваш Email Введите ваше имя</p> <div class="bizon_input"><input type="text" name="name" class="name_inp" placeholder="Введите ваше имя" required=""></div> </div> <div class="bizon_form_box_item"> <button class="btns"> '+butInner+' </button> </div> </div> <div class="polits"> <p class="text-grey" > '+polit+' </p> </div> </div> </div> </div> </div> </div>';
         $('.container').before(html);
         $(".bglayer").remove();
 
